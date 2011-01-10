@@ -12,6 +12,8 @@ require 'cucumber/rails/rspec'
 require 'cucumber/rails/world'
 require 'cucumber/web/tableish'
 
+require 'factory_girl/step_definitions'
+
 require 'capybara/rails'
 require 'capybara/cucumber'
 require 'capybara/session'
@@ -35,10 +37,8 @@ ActionController::Base.allow_rescue = false
 
 # How to clean your database when transactions are turned off. See
 # http://github.com/bmabey/database_cleaner for more info.
-if defined?(ActiveRecord::Base)
-  begin
-    require 'database_cleaner'
-    DatabaseCleaner.strategy = :truncation
-  rescue LoadError => ignore_if_database_cleaner_not_present
-  end
+begin
+  require 'database_cleaner'
+  DatabaseCleaner.strategy = :truncation
+rescue LoadError => ignore_if_database_cleaner_not_present
 end
