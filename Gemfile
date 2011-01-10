@@ -8,4 +8,7 @@ group :test, :development do
   gem "rspec-rails", "~> 2.4"
   gem "autotest"
   gem "capybara"
+  gem "shoulda"
+  gem "factory_girl"
+  gem "cucumber-rails"
 end
