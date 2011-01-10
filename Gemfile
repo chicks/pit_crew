@@ -12,4 +12,5 @@ group :test, :development do
   gem "shoulda"
   gem "factory_girl"
   gem "cucumber-rails"
+#  gem 'mongoid-rspec'
 end

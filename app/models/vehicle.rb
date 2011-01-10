@@ -7,4 +7,7 @@ class Vehicle
   field :year, :type => Fixnum
   field :mileage, :type => Fixnum
   field :vin, :type => String
+  
+  validates_presence_of :make, :model, :mileage, :year, :vin
+  
 end

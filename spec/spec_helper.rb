@@ -2,7 +2,7 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
-require 'mongoid-rspec'
+#require 'mongoid-rspec'
 require 'factory_girl'
 
 Dir.glob(Rails.root.join("spec", "factories", "*.rb").to_s).each do |f|
@@ -23,9 +23,4 @@ RSpec.configure do |config|
   # config.mock_with :flexmock
   # config.mock_with :rr
   config.mock_with :rspec
-
-  # If you're not using ActiveRecord, or you'd prefer not to run each of your
-  # examples within a transaction, remove the following line or assign false
-  # instead of true.
-  config.use_transactional_fixtures = false
 end
