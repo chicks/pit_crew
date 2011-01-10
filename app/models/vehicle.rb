@@ -10,4 +10,8 @@ class Vehicle
   
   validates_presence_of :make, :model, :mileage, :year, :vin
   
+  def maintenance
+    "Change the oil"
+  end
+  
 end

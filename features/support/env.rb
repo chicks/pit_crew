@@ -13,6 +13,7 @@ require 'cucumber/rails/world'
 require 'cucumber/web/tableish'
 
 require 'factory_girl/step_definitions'
+Dir.glob(Rails.root.join("spec", "factories", "*.rb").to_s).each {|f| require f}
 
 require 'capybara/rails'
 require 'capybara/cucumber'

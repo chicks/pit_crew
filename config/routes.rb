@@ -1,4 +1,5 @@
 PitCrew::Application.routes.draw do
+  match 'vehicles/:id/maintenance' => 'vehicles#maintenance', :as => :vehicle_maintenance
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

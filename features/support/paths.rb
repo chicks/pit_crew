@@ -16,6 +16,8 @@ module NavigationHelpers
     #
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
+    when /vehicle_maintenance/
+      vehicle_maintenance_path(Vehicle.first)
 
     else
       begin
